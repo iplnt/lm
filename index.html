@@ -23,15 +23,15 @@
     <iframe src="https://script.google.com/macros/s/AKfycbxelLPEEqmmjQ6c73iwCOTFeUkmXMR1xjZ8WECRZbtNyFpLgDNaJQwOI9nvbwR8VJqfVA/exec"></iframe>
 
     <script>
-      // REGISTRO CORRECTO DEL SERVICE WORKER
+      // Registro limpio del Service Worker para evitar errores en consola
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          // Apuntamos al archivo real sw.js que creaste en GitHub
           navigator.serviceWorker.register('sw.js')
-            .then(reg => console.log('Service Worker registrado con éxito', reg))
-            .catch(err => console.log('Error al registrar el Service Worker', err));
+            .then(reg => console.log('Sitema La Montañita: Listo para instalar'))
+            .catch(err => console.log('Error de registro:', err));
         });
       }
     </script>
 </body>
-</html>
+</h
+    tml>
