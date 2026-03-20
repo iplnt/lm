@@ -1,3 +1,4 @@
-self.addEventListener('fetch', (event) => {
-  // El Service Worker está activo pero no interfiere con el tráfico
+// Este archivo permite que Chrome considere la web como una Aplicación Real
+self.addEventListener('fetch', function(event) {
+  // No hace falta agregar lógica aquí, su sola presencia activa el modo PWA
 });
