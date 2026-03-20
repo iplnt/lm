@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>LA MONTAÑITA</title>
 
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,17 +13,19 @@
     <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibtomcHSRA7TEmMsC8b_cwT_ojI83TWLXcwzO_Qh2nn8PI7CqeyVhjvAf1J1vAo90Jvh2mI2OK0BeugL7NH8GOf43LGRpYrZNO4gtOiTsOp8EgZVp2Fz3WwksAoxQNzjeXPNIVno1TkW0a534HE-3S3H0yi_EaKA5GIn9ZXLyzyFkidv5E8W5yKgVCvvxj/s1600-rw/favicon.png">
     <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEj-xikoXHxPULLuUJLOR19xhBHW-__HTBNbjU54Uzk_Yewk_-b2B_SKT7qE3VEua6Gmw_kqiH7HSzBBjUA_589XkUdXtPt0SBqoKkRLtjkvoDRt3D8553k-eyO6zu4ZM7xcp-Q6xvYmvum2vrStm7ISIAlbePFu45rgrc6N3E5ppBTQCWi0hkjHaCRFHRtN">
     
-    <link rel="manifest" href='data:application/manifest+json,{"name":"La Montañita","short_name":"Montañita","start_url":".","display":"standalone","background_color":"#2c3e50","theme_color":"#2c3e50"}'>
+    <link rel="manifest" href='data:application/manifest+json,{"name":"La Montañita","short_name":"Montañita","start_url":".","display":"standalone","background_color":"#2c3e50","theme_color":"#2c3e50","icons":[{"src":"https://blogger.googleusercontent.com/img/a/AVvXsEj-xikoXHxPULLuUJLOR19xhBHW-__HTBNbjU54Uzk_Yewk_-b2B_SKT7qE3VEua6Gmw_kqiH7HSzBBjUA_589XkUdXtPt0SBqoKkRLtjkvoDRt3D8553k-eyO6zu4ZM7xcp-Q6xvYmvum2vrStm7ISIAlbePFu45rgrc6N3E5ppBTQCWi0hkjHaCRFHRtN","sizes":"192x192","type":"image/png"}]}'>
 
     <style>
+        /* Eliminamos cualquier margen y forzamos el 100% de la pantalla */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
             overflow: hidden;
-            background-color: #2c3e50;
+            background-color: #2c3e50; /* Color de fondo igual a tu Navbar */
         }
+        /* El iframe estirado al máximo */
         iframe {
             position: absolute;
             top: 0;
@@ -36,6 +38,14 @@
 </head>
 <body>
     <iframe src="https://script.google.com/macros/s/AKfycbxelLPEEqmmjQ6c73iwCOTFeUkmXMR1xjZ8WECRZbtNyFpLgDNaJQwOI9nvbwR8VJqfVA/exec"></iframe>
+
+    <script>
+      // Registro de Service Worker vacío para habilitar el botón "Instalar" en Chrome
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('data:application/javascript,console.log("SW Activo")');
+        });
+      }
+    </script>
 </body>
-</htm
-l>
+</html>
